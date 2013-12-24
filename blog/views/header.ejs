@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title><%= title %>-Whisper</title>
+<link rel='stylesheet' href='/stylesheets/bootstrap.css' /> 
+<link href="stylesheets/bootstrap-theme.css" rel="stylesheet"> 
+<link href="stylesheets/blog.css" rel="stylesheet"> 
+<script src="/javascripts/jquery-1.9.1.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+</head>
+<body>
+	<div id="container" class="container" >
+		<nav class="navbar  navbar-inverse navbar-fixed-top"  role ="navigation">
+		  	<div class="navbar-header">
+		  		<a class="navbar-brand" href="/">Whisper</a>
+		  	</div>	
+		  	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    		<ul class="nav navbar-nav">
+		     		<li><a href="/">首頁</a></li>
+		     		<% if(user){ %>
+		     		<li><a href="/post">发表</a></li>
+			    	<li><a href="/logout">退出</a></li>
+			    	<% }else{ %>
+		    		<li><a href="/login">登陸</a></li>
+			    	<li><a href="/reg">註冊</a></li>
+			    	<% } %>
+	    		</ul>
+			    <form class="navbar-form navbar-left" role="search">
+			      <div class="form-group">
+			        <input type="text" class="form-control" placeholder="搜索">
+			      </div>
+			      <button type="submit" class="btn btn-default">提交</button>
+			    </form>
+			    <% if(user) { %>
+	    		<ul class="nav navbar-nav navbar-right">
+	      			
+	      			<li class="dropdown">
+	        			<a href="#" class="dropdown-toggle" data-toggle="dropdown">通知 <b class="caret"></b></a>
+		        		<ul class="dropdown-menu">
+			          		<li><a href="#">回复</a></li>
+					        <li><a href="#">转发</a></li>
+					        <li class="divider"></li>
+					        <li><a href="#">私信</a></li>
+				     	</ul>
+			      	</li>
+			    </ul>
+			    <% } %>
+	  		</div>
+		</nav>
+
+		<% if(success){ %>
+			<div class="alert alert-success alert-dismissable" style="margin-top:70px">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<%= success %>
+			</div>
+		<% } %>
+		<% if(error){ %>
+			<div class="alert alert-danger alert-dismissable" style="margin-top:70px">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<%= error %></div>
+		<% } %>

@@ -1,0 +1,25 @@
+<%- include header %>
+	<form class="form-horizontal" method="post" role="form" style="margin-top:80px">
+		<fieldset>
+		<legend>用户注册</legend>
+		<div class="form-group">
+			<label for="Name" class="col-md-2">用户名</label>
+			<div class="col-md-8"><input class="form-control " id="name" name="name" placeholder="请输入用户名"></div>
+		</div>
+		<div class="form-group">
+			<label for="Password" class="col-md-2">密码</label>
+			<div class="col-md-8"><input type="password" class="form-control " id="password" name="password" placeholder="请输入密码"></div>
+		</div>
+		<div class="form-group">
+			<label for="Username" class="col-md-2">重复输入密码</label>
+			<div class="col-md-8"><input type="password" class="form-control " id="password-repeat" name="password-repeat" placeholder="再次输入密码"></div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2">邮箱</label>
+			<div class="col-md-8"><input type="email" class="form-control " id="email" name="email" placeholder="请输入邮箱"></div>
+		</div>
+		<button type="sumbit" class="btn btn-primary col-md-offset-2" style="margin-left:194px">注册</button>		
+		</fieldset>
+	</form>
+
+<%- include footer %>
