@@ -1,11 +1,11 @@
 <%- include header %>
-	<div style="margin-top:80px"><h2>个人主页</h2></div>
+	<div style="margin-top:80px"><h2>个人主页:</h2></div>
 	<% posts.forEach(function(post,index){ %>
 		<p><h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2></p>
   		<p >
     	作者：<a href="/u/<%= post.name %>"><%= post.name %></a> | 
     	日期：<%= post.time.minute %>
   		</p>
-  		<p class="twitter"><%- post.post %></p>
+  		<%- post.post %>
 	<% }) %>
 <%- include footer %>

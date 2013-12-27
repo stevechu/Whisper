@@ -2,11 +2,11 @@
 <html>
 <head>
 <title><%= title %>-Whisper</title>
-<link rel='stylesheet' href='/stylesheets/bootstrap.css' /> 
-<link href="stylesheets/bootstrap-theme.css" rel="stylesheet"> 
-<link href="stylesheets/blog.css" rel="stylesheet"> 
 <script src="/javascripts/jquery-1.9.1.js"></script>
 <script src="/javascripts/bootstrap.js"></script>
+<link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css"/> 
+<link href="stylesheets/bootstrap-theme.css" rel="stylesheet" type="text/css"/> 
+<link href="stylesheets/blog.css" rel="stylesheet" type="text/css"/> 
 </head>
 <body>
 	<div id="container" class="container" >
@@ -49,13 +49,13 @@
 		</nav>
 
 		<% if(success){ %>
-			<div class="alert alert-success alert-dismissable" style="margin-top:70px">
+			<div class="alert alert-success alert-dismissable first" >
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 				<%= success %>
 			</div>
 		<% } %>
 		<% if(error){ %>
-			<div class="alert alert-danger alert-dismissable" style="margin-top:70px">
+			<div class="alert alert-danger alert-dismissable first" >
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 				<%= error %></div>
 		<% } %>

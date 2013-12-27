@@ -4,7 +4,7 @@
 		-->
 <%- include header %>
 <% if(!user){ %>
-	<div style="margin-top:80px ">
+	<div class="first ">
  		<div class="jumbotron">
  			<h2>欢迎来到Whisper</h2>
  			<p>Whisper是一个基于Node.js的微博系统，轻声耳语</p>
@@ -29,7 +29,7 @@
 		</div>	
 	</div>
 <% }else{ %>
-	<div style="margin-top:80px"><p>所有文章里表：</p></div>
+	<div class="first"><h2>所有文章里表：</h2></div>
 	<% posts.forEach(function(post,index){ %>
 		<h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
 		<p>作者：<a href="/u/<%= post.name %>"><%= post.name %></a> | 日期：<%= post.time.minute %></p>
