@@ -31,9 +31,11 @@
 <% }else{ %>
 	<div class="first"><h2>所有文章里表：</h2></div>
 	<% posts.forEach(function(post,index){ %>
+		
 		<h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
 		<p>作者：<a href="/u/<%= post.name %>"><%= post.name %></a> | 日期：<%= post.time.minute %></p>
-		<p class="twitter"><%- post.post %></p>
+		<p><%- post.post %></p>
+
 	<% }) %>
 <% } %>
 <%- include footer %>
